@@ -1,12 +1,15 @@
+import Layout from "src/templates/Layout";
+
+
 interface ContactProps {
     
 }
  
 const Contact: React.FC<ContactProps> = () => {
     return (
-        <div>
-            Work In Progress
-        </div>
+        <Layout currPage="Contact">
+
+        </Layout>
     );
 }
  

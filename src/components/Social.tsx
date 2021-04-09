@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodepen, faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
+
 export interface SocialProps {
   
 }
@@ -23,7 +24,7 @@ const Social: React.FC<SocialProps> = () => {
         <span className="w-0.25 h-24 bg-gray-900 block my-0 mx-auto mt-5"></span>
       </div>
 
-      <div className="hidden lg:block fixed bottom-0 right-8 z-20 text-gray-800 cursor-pointer">
+      <div className="hidden lg:block fixed bottom-0 right-8 z-20 text-gray-800">
         <span className="v-text hover:text-teal-600 transform hover:-translate-y-1 transition-all font-mono">
           <a href="mailto:brian@dbrianr.com">brian@dbrianr.com</a>
         </span>

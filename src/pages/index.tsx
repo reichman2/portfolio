@@ -15,17 +15,17 @@ const skills = [
       "TypeScript": { image: 'typescript-logo.svg' },
       "React": { image: 'react-logo.svg' },
       "NextJS": { image: 'next-logo.svg' },
-      "ExpressJS": { image: '' },
-      "GraphQL": { image: '' },
+      "ExpressJS": { image: 'expressjs-logo.svg' },
+      "GraphQL": { image: 'graphql-logo.svg' },
       "Sass": { image: 'sass-logo.svg' },
-      "Tailwind": { image: '' },
+      "Tailwind": { image: 'tailwindcss-logo.svg' },
     }
   },
   {
     name: "Python",
     technologies: {
       "Django": { image: 'django-logo.png' },
-      "Flask": { image: '' },
+      "Flask": { image: 'flask-logo.svg' },
     }
   },
   {

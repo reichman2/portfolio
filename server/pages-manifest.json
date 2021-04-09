@@ -1,6 +1,5 @@
 {
   "/_app": "pages/_app.js",
-  "/api/hello": "pages/api/hello.js",
   "/blog": "pages/blog.html",
   "/contact": "pages/contact.html",
   "/": "pages/index.html",

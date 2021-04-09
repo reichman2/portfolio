@@ -6,56 +6,13 @@ import Card from 'src/components/Card';
 import Perspective from 'src/components/Perspective';
 import Layout from "../templates/Layout";
 
+import skills from '../data/mySkills';
 
-
-const skills = [
-  {
-    name: "JavaScript",
-    technologies: {
-      "TypeScript": { image: 'typescript-logo.svg' },
-      "React": { image: 'react-logo.svg' },
-      "NextJS": { image: 'next-logo.svg' },
-      "ExpressJS": { image: 'expressjs-logo.svg' },
-      "GraphQL": { image: 'graphql-logo.svg' },
-      "Sass": { image: 'sass-logo.svg' },
-      "Tailwind": { image: 'tailwindcss-logo.svg' },
-    }
-  },
-  {
-    name: "Python",
-    technologies: {
-      "Django": { image: 'django-logo.png' },
-      "Flask": { image: 'flask-logo.svg' },
-    }
-  },
-  {
-    name: "Game Development",
-    technologies: {
-      "Unity": { image: 'unity-logo.png' },
-    }
-  },
-  {
-    name: "Design",
-    technologies: {
-      "Adobe Illustrator": { image: 'illustrator-logo.svg' },
-      "Adobe Photoshop": { image: 'photoshop-logo.svg' },
-      "Blender": { image: 'blender-logo.svg' }
-    }
-  },
-  {
-    name: "Other",
-    technologies: {
-      "Java": { image: 'java-logo.svg' },
-      "C#": { image: '' },
-      "Bukkit": { image: '' },
-    }
-  },
-];
 
 const Home = () => {
   const bpCols = {
     default: 2,
-    500: 1 
+    860: 1 
   }
   
   // Trigger wave animation on hover
@@ -72,16 +29,24 @@ const Home = () => {
 
   let skillNodes = skills.map((elm, i) => {
     const techKeys = Object.keys(elm.technologies);
-    const size = 96;
+    const size = 64;
 
     return (
       <Card key={ i } className="transform hover:-translate-y-1 -mb-32">
         <>
-          <h4 className="text-3xl font-semibold">{ elm.name }</h4>
-          <ul>
+          <h4 className="text-3xl font-semibold mb-8">{ elm.name }</h4>
+          <ul className="flex flex-wrap">
             {techKeys.map((tk, i) => {
               return (
-                <li key={ i }><Image src={`/technologies/${elm.technologies[tk].image}`} width={ size } height={ size } alt={ tk } title={ tk } /></li>
+                <li key={ i } className="px-3 py-1">
+                  <Image 
+                    src={`/technologies/${elm.technologies[tk].image}`} 
+                    width={ size } 
+                    height={ size } 
+                    alt={ tk } 
+                    title={ tk } 
+                  />
+                </li>
               );
             })}
           </ul>
@@ -107,20 +72,20 @@ const Home = () => {
           <div className="lg:w-1/2 sm:w-full">
             <div className="flex justify-center relative top-16">
               <div className="p-0 m-0 text-none shadow-md lg:hover:shadow-xl transition-all">
-                <Image src="/erk1tmqlej.jpg" width="250" height="375" className="" /> {/* My photo of me. */}
+                <Image src="/erk1tmqlej.jpg" width="250" height="375" /> {/* My photo of me. */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="w-full p-24">
+      <section className="w-full lg:p-24 p-8">
         <h3 className="font-semibold text-5xl text-center">Skills</h3>
         <p className="text-xl text-center pb-12">Here's what I know</p>
         
         <Masonry 
           breakpointCols={ bpCols }
-          className="skill-masonry "
-          columnClassName="skill-masonry-col"
+          className="skill-masonry"
+          columnClassName="skill-masonry-col lg:px-4"
         >
           { skillNodes }
         </Masonry>

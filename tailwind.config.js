@@ -35,9 +35,14 @@ module.exports = {
         cyan: colors.cyan
       },
       fontFamily: {
-        raleway: ['Raleway', 'Helvetica', 'Arial', 'sans-sserif']
+        raleway: ['Raleway', 'Helvetica', 'Arial', 'sans-sserif'],
+        mono: ['Roboto Mono', 'monospace']
       },
       borderWidth: {
+        '1.5': '1.5px'
+      },
+      width: {
+        '0.25': '0.0625rem',
         '1.5': '1.5px'
       }
     },

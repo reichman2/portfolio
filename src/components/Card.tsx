@@ -1,8 +1,8 @@
-import { ReactChild, ReactChildren } from "react";
+import { Key, ReactChild, ReactChildren } from "react";
 
 
 export interface CardProps {
-  children?: string | ReactChild | ReactChildren | never | never[];
+  children?: string | Element | Element[] | ReactChild | ReactChildren | never | never[];
   className?: string;
 }
  

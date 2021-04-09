@@ -3,7 +3,6 @@ import Masonry from 'react-masonry-css';
 import React from 'react';
 
 import Card from 'src/components/Card';
-import Perspective from 'src/components/Perspective';
 import Layout from "../templates/Layout";
 
 import skills from '../data/mySkills';
@@ -61,12 +60,14 @@ const Home = () => {
       <section className="hero bg-white h-screen">
         <div className="flex m-auto flex-col lg:flex-row">
           <div className="lg:w-1/2 md:w-full mt-20">
-            <h1 className="font-semibold text-8xl text-center mb-4">
-              Hi! <span className="wave-emoji wave-animation" onMouseEnter={(e) => waveHover(e)}>👋</span>
-            </h1>
-            <div className="text-center">
-              <span className="font-semibold font-raleway text-5xl text-center">I'm Brian</span><br />
-              <span className="font-semibold text-4xl text-gray-800 text-center">Full Stack Software Developer</span>
+            <div className="flex flex-col justify-center resize-y h-full">
+              <h1 className="font-semibold text-8xl align text-center mb-4">
+                Hi! <span className="wave-emoji wave-animation" onMouseEnter={(e) => waveHover(e)}>👋</span>
+              </h1>
+              <div className="text-center">
+                <span className="font-semibold font-raleway text-5xl text-center">I'm Brian</span><br />
+                <span className="font-semibold text-4xl text-gray-800 text-center">Full Stack Software Developer</span>
+              </div>
             </div>
           </div>
           <div className="lg:w-1/2 sm:w-full">
@@ -80,7 +81,7 @@ const Home = () => {
       </section>
       <section className="w-full lg:p-24 p-8">
         <h3 className="font-semibold text-5xl text-center">Skills</h3>
-        <p className="text-xl text-center pb-12">Here's what I know</p>
+        <p className="text-xl text-center pb-12">Here's what I can do</p>
         
         <Masonry 
           breakpointCols={ bpCols }

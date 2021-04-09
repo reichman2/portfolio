@@ -14,27 +14,58 @@
 }
 
 .hero {
-    clip-path: polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0);
+    /* clip-path: polygon(100% 0, 100% 89%, 50% 100%, 0 89%, 0 0); */
+    clip-path: polygon(100% 0, 100% 89%, 0 100%, 0 89%, 0 0);
 }
 
 .card {
 
 }
 
-.perspective-outer {
-    perspective: 40px;
+.wave-emoji {
+    display: inline-block;
+    transition: transform ease;
+    transform-origin: 70% 70%;
 }
 
-.perspective-inner {
+.wave-animation {
+    animation: wave 2.5s 1;
+}
 
+.wave-emoji:hover {
+    animation-play-state: initial;
+}
+
+.skill-masonry {
+    display: flex;
+}
+
+.skill-masonry-col > div {
+    margin-bottom: 30px;
+}
+
+.skill-masonry-col {
+    padding-left: 30px;
+    background-clip: padding-box;
 }
 
 .fade-in-element {
-    animation: fade-in 1.4s;
+    animation: fade-in 1.4s ease;
+}
+
+@keyframes wave {
+    0%   { transform: rotate(0deg); }
+    10%   { transform: rotate(14deg); }
+    20%   { transform: rotate(-8deg); }
+    30%  { transform: rotate(14deg); }
+    40%  { transform: rotate(-4deg); }
+    50%  { transform: rotate(10deg); }
+    60%  { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
 }
 
 @keyframes fade-in {
-    from: {
+    from {
         opacity: 0;
         transform: scale(.7, .7);
     }

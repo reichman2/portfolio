@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { jsx as _jsx } from \"react/jsx-runtime\";\nimport Navigation from './Navigation';\n\nconst Header = ({\n  currPage\n}) => {\n  return /*#__PURE__*/_jsx(\"header\", {\n    children: /*#__PURE__*/_jsx(Navigation, {\n      currPage: currPage\n    })\n  });\n};\n\nexport default Header;","map":null,"metadata":{},"sourceType":"module"}

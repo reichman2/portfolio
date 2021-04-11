@@ -1,4 +1,9 @@
-const skills = [
+type Skill = {
+  name: string;
+  technologies: object;
+}
+
+const skills: Array<Skill> = [
   {
     name: "JavaScript",
     technologies: {
@@ -16,6 +21,14 @@ const skills = [
     technologies: {
       "Django": { image: 'django-logo.png' },
       "Flask": { image: 'flask-logo.svg' },
+    }
+  },
+  {
+    name: "Cloud",
+    technologies: {
+      "Vercel": { image: 'vercel-logo.svg' },
+      "Heroku": { image: 'heroku-logo.svg' },
+      "AWS": { image: 'aws-logo.svg' }
     }
   },
   {

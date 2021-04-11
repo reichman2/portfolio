@@ -47,7 +47,10 @@ module.exports = {
       },
       width: {
         '0.25': '0.0625rem',
-        '1.5': '1.5px'
+        '1.5': '1.5px',
+      },
+      height: {
+        'screen-1/2': '50vh'
       }
     },
   },

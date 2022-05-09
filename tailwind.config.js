@@ -6,6 +6,7 @@ module.exports = {
     './src/**/*.html',
     './src/**/*.tsx',
     './src/**/*.jsx',
+    './src/**/*.mdx',
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -51,6 +52,10 @@ module.exports = {
       },
       height: {
         'screen-1/2': '50vh'
+      },
+      
+      minHeight: {
+        '32': '8rem',
       }
     },
   },

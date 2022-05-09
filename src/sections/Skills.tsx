@@ -5,11 +5,7 @@ import Card from "src/components/Card";
 import skills from "src/data/mySkills";
 
 
-interface SkillsProps {
-    
-}
- 
-const Skills: React.FC<SkillsProps> = () => {
+const Skills: React.FC<{}> = () => {
   let skillNodes = skills.map((elm, i) => {
     const techKeys = Object.keys(elm.technologies);
     const size = 64;

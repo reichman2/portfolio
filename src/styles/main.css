@@ -19,6 +19,26 @@
     clip-path: polygon(100% 0, 100% 89%, 0 100%, 0 89%, 0 0);
 }
 
+.slant-top {
+    clip-path: polygon(0 0, 100% 11%, 100% 100%, 0% 100%);
+}
+
+.slant-top-mirror {
+
+}
+
+.slant-top-bottom {
+    clip-path: polygon(0 0, 100% 11%, 100% 89%, 0 100%);
+}
+
+.slant-bottom {
+    clip-path: polygon(100% 0, 100% 89%, 0 100%, 0 89%, 0 0);
+}
+
+.slant-bottom-mirror {
+    clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
+}
+
 .card {
 
 }
@@ -56,6 +76,10 @@
 .v-text {
     writing-mode: vertical-rl;
     line-height: 1;
+}
+
+.img-fix > span {
+    display: block !important;
 }
 
 @keyframes wave {

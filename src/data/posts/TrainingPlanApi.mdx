@@ -1,0 +1,41 @@
+---
+title: "Creating an API to get Training Plan Data for my Cross Country Team"
+description: "Using JavaScript, Heroku, and Scriptable to display training plan data for my cross country team in an iOS widget."
+date: "Nov 4, 2021"
+author: "Brian"
+---
+
+This is probably one of the most useful things I've created.  I've always wanted to create something to benefit my cross country team. 
+I attempted a few things things, like trying to make a strava clone that was better suited for our use, however with the release of iOS 15 widgets, 
+a more manageable idea came to mind.  What I wanted to achieve was quite simple: create a widget that would display a person's current run for the day.
+<br />
+I was quite please with what I was able to come up with.  The part I found most difficult, however, was parsing the pdf that my coach was sending to us 
+into JSON that can be easily understood by the client (widget) that is making the request.  After a few days of head scratching, I was able to turn the
+PDF below into JSON.  The below JSON snippet is what is returned by the server when a request is made asking for the plan for myself (Reich).
+
+<div className="flex lg:flex-row justify-around flex-col w-full items-center my-4">
+    <div className="bg-white shadow-sm hover:shadow-md transition-shadow lg:my-2 my-4">
+        <Image src="/TrainingPlanExample.png" width={ 1607 / 4 } height={ 1908 / 4 } className="block" />
+    </div>
+    <div className="shadow-sm hover:shadow-md transition-shadow bg-white img-fix lg:my-2 my-4">
+        <Image src="/training-plan-week-json.png" width={ 1120 / 2 } height={ 626 / 2 } className="block" />
+    </div>
+</div>
+
+Soon after I begin this project I quickly found out taking information that was made to be human readable and turn it into something that is much easier
+for a computer to read is quite difficult.  Because there was no "standard" for my coach, an issue I would routinely have to deal with is updaing the
+parsing function so it understands minor changes such as slightly different formatting.  One thing that was commonly changed was the names of the 
+different mileage groups.  Usually, mileage group titles start with a number, however that wasn't always the case.  Sometimes, such as in the PDF above,
+the "~" character is placed in front.  Sometimes the word "Distance" would appear in each group on the line before the name of the group.
+So I had to add special cases for when a header started with those different things.  After our season ended, my coach just stopped putting people's
+name's in the document, breaking the feature where a user could request training data given their name.  Suffice to say, I was very quick to learn that
+parsing user data was much easier said than done.  Slight changes in the way that the document was written, such as switching a "separator" character
+could break the parser.  Just beacuse a document is visibly easy to read doesn't mean it is easy for a computer to read.
+<br />
+The resulting widget that would appear on a user's phone would look something like this:
+
+<div className="flex lg:flex-row justify-around flex-col w-full items-center my-4">
+    <div className="bg-white shadow-sm hover:shadow-md transition-shadow lg:my-2 my-4 img-fix">
+        <Image src="/IMG_1247.jpeg" width={ 2 * 379 / 3 } height={ 2 * 405 / 3 } className="block" />
+    </div>
+</div>

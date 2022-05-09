@@ -28,7 +28,7 @@ const skills: Array<Skill> = [
     technologies: {
       "Vercel": { image: 'vercel-logo.svg' },
       "Heroku": { image: 'heroku-logo.svg' },
-      "AWS": { image: 'aws-logo.svg' }
+      // "AWS": { image: 'aws-logo.svg' }
     }
   },
   {
